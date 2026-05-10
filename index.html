@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servidor Web — DMZ</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: sans-serif; background: #1a1a2e; color: #e0e0e0; min-height: 100vh; }
+    .topbar { background: #0f0f1a; border-bottom: 1px solid #333; padding: 8px 20px; font-size: 13px; color: #888; }
+    .header { background: #0d1b2a; border-bottom: 1px solid #2a3a4a; padding: 40px; }
+    .badge { display: inline-block; background: #00ff88; color: #000; font-size: 11px; font-weight: bold; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+    h1 { font-size: 28px; color: #fff; margin-bottom: 6px; }
+    .subtitle { font-size: 14px; color: #7a9ab0; }
+    .content { padding: 30px 40px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+    .card { background: #0f1923; border: 1px solid #2a3a4a; border-radius: 10px; padding: 18px; }
+    .card-title { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #5a7a8a; margin-bottom: 10px; }
+    .card-val { font-size: 22px; font-weight: bold; color: #00ff88; }
+    .card-sub { font-size: 12px; color: #5a7a8a; margin-top: 4px; }
+    .info-block { background: #0f1923; border: 1px solid #2a3a4a; border-radius: 10px; padding: 20px; margin-bottom: 16px; }
+    .info-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #1e2e3e; font-size: 14px; }
+    .info-row:last-child { border-bottom: none; }
+    .info-label { color: #7a9ab0; }
+    .info-value { font-family: monospace; font-size: 13px; }
+    .footer { padding: 20px 40px; border-top: 1px solid #2a3a4a; font-size: 12px; color: #4a6a7a; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">http://172.16.87.2:7587</div>
+
+  <div class="header">
+    <div class="badge">● EN LÍNEA</div>
+    <h1>Servidor Web — DMZ</h1>
+    <p class="subtitle">Módulo: Bastionado de Redes y Sistemas · Curso de Especialización en Ciberseguridad</p>
+  </div>
+
+  <div class="content">
+    <div class="grid">
+      <div class="card">
+        <div class="card-title">Puerto de escucha</div>
+        <div class="card-val">7587</div>
+        <div class="card-sub">No estándar (personalizado)</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Servidor</div>
+        <div class="card-val" style="font-size:18px;">Apache 2</div>
+        <div class="card-sub">Debian 13</div>
+      </div>
+    </div>
+
+    <div class="info-block">
+      <div class="info-row">
+        <span class="info-label">Alumno</span>
+        <span class="info-value">asanram</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">IP del servidor (DMZ)</span>
+        <span class="info-value">172.16.87.2</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Firewall (gateway)</span>
+        <span class="info-value">172.16.87.1</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Red LAN interna</span>
+        <span class="info-value">192.168.87.0/24</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Firewall</span>
+        <span class="info-value">nftables</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Actividad Calificable 5.1 · Implementación de una DMZ con nftables · 2025-2026
+  </div>
+
+</body>
+</html>
